@@ -1,8 +1,10 @@
 .hero {
-    background-color: var(--color-bg-light);
     padding: 100px 20px;
     text-align: center;
     position: relative;
+    min-height: 100vh;
+    background: transparent;
+    overflow: hidden;
   }
   
   .content {

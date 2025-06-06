@@ -12,8 +12,8 @@ const RotatingTetrahedron: React.FC = () => {
     }
   });
   return (
-    <mesh ref={ref} position={[0, -1, 0]} scale={[2, 2, 2]}>
-      <tetrahedronGeometry args={[1.5]} />
+    <mesh ref={ref} position={[0, -1, 0]} scale={[3, 3, 3]}>
+      <tetrahedronGeometry args={[2]} />
       <meshBasicMaterial color="#e9ff47" wireframe />
     </mesh>
   );
@@ -21,17 +21,17 @@ const RotatingTetrahedron: React.FC = () => {
 
 const FloatingObjects: React.FC = () => {
   return (
-    <Canvas className="floatingCanvas" camera={{ position: [0, 0, 5] }}>
+    <Canvas className="floatingCanvas" camera={{ position: [0, 0, 6] }}>
       <ambientLight intensity={0.5} />
       <Float floatIntensity={2} rotationIntensity={1}>
-        <mesh position={[-2.5, 1, 0]}>
-          <boxGeometry args={[3, 3, 3]} />
+        <mesh position={[-3.5, 1.5, 0]}>
+          <boxGeometry args={[5, 5, 5]} />
           <meshBasicMaterial color="#e9ff47" wireframe />
         </mesh>
       </Float>
       <Float floatIntensity={2} rotationIntensity={1}>
-        <mesh position={[2.5, -0.5, 0]}>
-          <sphereGeometry args={[1.5, 32, 32]} />
+        <mesh position={[3.5, -1, 0]}>
+          <sphereGeometry args={[2.5, 32, 32]} />
           <meshBasicMaterial color="#e9ff47" wireframe />
         </mesh>
       </Float>
