@@ -6,21 +6,21 @@
   }
   
   .title {
-    font-size: 32px;
+    font-size: 42px;
     font-weight: 700;
-    color: #0d234a;
+    color: var(--color-text);
     margin-bottom: 20px;
   }
   
   .description {
     font-size: 18px;
-    color: #2e2e2e;
+    color: var(--color-text);
     line-height: 1.6;
     margin-bottom: 40px;
   }
   
   .highlight {
-    color: #0066ff;
+    color: var(--color-accent);
     font-weight: 600;
   }
   
@@ -32,7 +32,7 @@
   }
   
   .card {
-    background-color: #f5f9ff;
+    background-color: var(--color-bg-light);
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
     padding: 24px 16px;
@@ -44,7 +44,7 @@
   .cardText {
     font-size: 16px;
     font-weight: 500;
-    color: #2e2e2e;
+    color: var(--color-text);
     margin-top: 12px;
   }
   
@@ -60,7 +60,7 @@
   
   .note {
     font-size: 16px;
-    color: #2e2e2e;
+    color: var(--color-text);
     line-height: 1.6;
     max-width: 640px;
     margin: 0 auto;
@@ -75,15 +75,10 @@
   .accentLine {
     font-size: 24px;
     font-weight: 700;
-    color: #0d234a;
+    color: var(--color-accent);
     margin-bottom: 12px;
   }
   
-  .note {
-    font-size: 16px;
-    color: #2e2e2e;
-    line-height: 1.6;
-  }
   
   
   

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './LeadForm.module.css';
+import styles from '../CTA/CTA.module.css';
 
 const CTA: React.FC = () => {
   return (
