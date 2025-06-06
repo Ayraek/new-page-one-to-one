@@ -1,0 +1,53 @@
+.footer {
+    background-color: #002b5c;
+    color: #ffffff;
+    padding: 40px 20px;
+    font-size: 14px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    text-align: left;
+  }
+  
+  .column {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .logo {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .copy {
+    opacity: 0.6;
+    margin-top: 8px;
+  }
+  
+  .column a {
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 12px;
+    margin-bottom: 6px;
+  }
+  
+  .column a:hover {
+    text-decoration: underline;
+  }
+  
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  
+  
+  
