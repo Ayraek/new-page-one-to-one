@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './AboutProgram.module.css';
+import ProgramModal from '../ProgramModal/ProgramModal';
 
 const programs = [
   {
@@ -19,8 +20,11 @@ const programs = [
 ];
 
 const AboutProgram: React.FC = () => {
+  const [showProgram, setShowProgram] = useState(false);
+
   return (
     <section className={styles.programs}>
+      {showProgram && <ProgramModal onClose={() => setShowProgram(false)} />}
       <h2 className={styles.title}>Программы обучения</h2>
       <div className={styles.grid}>
         {programs.map((program, index) => (
@@ -42,7 +46,9 @@ const AboutProgram: React.FC = () => {
               <span>Документ:</span>
               <p>{program.certificate}</p>
             </div>
-            <button className={styles.cta}>Подробнее</button>
+            <button className={styles.cta} onClick={() => setShowProgram(true)}>
+              Подробнее
+            </button>
           </div>
         ))}
       </div>
