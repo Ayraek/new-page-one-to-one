@@ -1,9 +1,8 @@
-import React from 'react';
-import Slider from 'react-slick';
+import React, { useEffect, useState } from 'react';
 import styles from './Reviews.module.css';
 
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import decorLeft from '../../assets/illustration-left.svg';
+import decorRight from '../../assets/illustration-right.svg';
 
 const reviews = [
   {
@@ -23,30 +22,29 @@ const reviews = [
   },
 ];
 
-const sliderSettings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  arrows: false,
-  autoplay: true,
-  autoplaySpeed: 6000,
-};
-
 const Reviews: React.FC = () => {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % reviews.length);
+    }, 6000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const { name, text, photo } = reviews[current];
+
   return (
     <section className={styles.reviews}>
+      <img src={decorLeft} alt="decor left" className={styles.decorLeft} />
+      <img src={decorRight} alt="decor right" className={styles.decorRight} />
       <h2 className={styles.title}>Отзывы студентов</h2>
-      <Slider {...sliderSettings}>
-        {reviews.map((review, index) => (
-          <div key={index} className={styles.card}>
-            <img src={review.photo} alt={review.name} className={styles.photo} />
-            <p className={styles.text}>"{review.text}"</p>
-            <p className={styles.name}>— {review.name}</p>
-          </div>
-        ))}
-      </Slider>
+      <div className={styles.card}>
+        <img src={photo} alt={name} className={styles.photo} />
+        <p className={styles.text}>"{text}"</p>
+        <p className={styles.name}>— {name}</p>
+      </div>
     </section>
   );
 };

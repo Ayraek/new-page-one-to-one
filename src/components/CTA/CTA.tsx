@@ -5,13 +5,13 @@ const CTA: React.FC = () => {
   return (
     <section className={styles.cta}>
       <h2 className={styles.title}>
-        Стань тем продактом, <br />
-        с каким мечтал бы работать сам
+        Готов сделать первый шаг<br />к профессии в IT?
       </h2>
-      <button className={styles.button}>Записаться на консультацию</button>
+      <button className={styles.button}>
+        Записаться на бесплатную консультацию
+      </button>
     </section>
   );
 };
 
 export default CTA;
-

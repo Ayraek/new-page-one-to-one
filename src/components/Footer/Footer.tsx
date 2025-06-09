@@ -1,52 +1,52 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import styles from './Footer.module.css';
 
 const Footer: React.FC = () => {
+  const footerRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const el = footerRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.classList.add(styles.visible);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <footer className="relative bg-[#d3d8d5] text-black py-10 px-6 font-sans">
-      {/* Call to action block */}
-      <div className="absolute top-0 right-0 flex items-center justify-center w-28 h-28 border border-black bg-yellow-300 text-center">
-        <span className="text-sm font-bold">LET’S TALK ↗</span>
-      </div>
+    <footer className={styles.footer} ref={footerRef}>
 
-      <div className="max-w-7xl mx-auto">
-        <div className="md:grid md:grid-cols-5 gap-8">
-          {/* Left title */}
-          <div className="leading-none font-bold uppercase text-4xl md:text-5xl space-y-1">
-            <p>ONE</p>
-            <p>TO</p>
-            <p>ONE</p>
-          </div>
-
-          {/* Right columns */}
-          <div className="col-span-4 grid grid-cols-2 sm:grid-cols-4 gap-x-6 text-sm mt-6 md:mt-0">
-            <div className="flex flex-col space-y-1">
-              <a href="#">Facebook ↗</a>
-              <a href="#">Instagram ↗</a>
-              <a href="#">Pinterest ↗</a>
-            </div>
-            <div className="flex flex-col space-y-1">
-              <span>Bovenkamp 7</span>
-              <span>1391 LA Abcoude</span>
-            </div>
-            <div className="flex flex-col space-y-1">
-              <a href="mailto:hello@format.furniture" className="underline">hello@format.furniture</a>
-              <span>0294 74 53 93</span>
-            </div>
-            <div className="flex flex-col space-y-1">
-              <a href="#" className="underline">Contact</a>
-              <a href="#" className="underline">Join us</a>
-            </div>
-          </div>
+      <div className={styles.columns}>
+        <div className={styles.column}>
+          <h4>Контакты</h4>
+          <p>+7 (999) 123-45-67</p>
+          <p>info@onetoone.ru</p>
         </div>
-
-        <div className="mt-16">
-          <h1 className="text-[160px] font-black lowercase tracking-tight leading-none">format</h1>
-          <p className="text-xs mt-2">© format 2024. All rights reserved.</p>
+        <div className={styles.column}>
+          <h4>Соц сети</h4>
+          <a href="https://t.me/example" target="_blank" rel="noopener noreferrer">Telegram</a><br />
+          <a href="https://instagram.com/example" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+        <div className={styles.column}>
+          <h4>Документы</h4>
+          <a href="/offer.pdf" target="_blank" rel="noopener noreferrer">Публичная оферта</a><br />
+          <a href="/privacy.pdf" target="_blank" rel="noopener noreferrer">Политика конфиденциальности</a>
         </div>
       </div>
+
+      <p className={styles.copy}>
+        © {new Date().getFullYear()} One to One. Все права защищены.
+      </p>
     </footer>
   );
 };
 
 export default Footer;
-
