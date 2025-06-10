@@ -1,5 +1,6 @@
-import { FC } from 'react';
+import { FC, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import type { Swiper as SwiperType } from 'swiper';
 import { Pagination, Keyboard } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -40,6 +41,8 @@ const slides: Slide[] = [
 ];
 
 const Concept: FC = () => {
+  const swiperRef = useRef<SwiperType>();
+
   return (
     <section className={styles.concept}>
       <div className={styles.textBlock}>
@@ -57,10 +60,16 @@ const Concept: FC = () => {
         slidesPerView={1}
         pagination={{ clickable: true }}
         keyboard={{ enabled: true }}
+        onSwiper={(swiper) => {
+          swiperRef.current = swiper;
+        }}
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.title} className={styles.slide}>
-            <div className={styles.card}>
+            <div
+              className={styles.card}
+              onClick={() => swiperRef.current?.slideNext()}
+            >
               <img src={slide.image} alt={slide.title} className={styles.image} />
               <h3 className={styles.cardTitle}>{slide.title}</h3>
               <p className={styles.cardSubtitle}>{slide.subtitle}</p>
