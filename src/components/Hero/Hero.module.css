@@ -1,11 +1,15 @@
 .hero {
-  padding: 100px 20px;
-  min-height: 100vh;
-  background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+  position: relative;
+  height: 80vh; /* занимать ~80% высоты экрана */
+  background: linear-gradient(135deg, #fdfbfb 0%, #a6d2e8 100%);
+  padding-top: 100px; /* под хедер */
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
 }
 
 .content {
@@ -24,7 +28,7 @@
 }
 
 .title {
-  font-size: 30px;
+  font-size: 32px;
   font-weight: 800;
   line-height: 1.2;
   color: #111;
@@ -47,7 +51,7 @@
 .button {
   background-color: #111;
   color: #fff;
-  font-weight: 400;
+  font-weight: 500;
   padding: 16px 32px;
   font-size: 14px;
   border: none;
@@ -64,10 +68,11 @@
   flex: 1;
   min-width: 280px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .imageContainer img {
   max-width: 100%;
   height: auto;
+  object-fit: contain;
 }
