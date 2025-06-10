@@ -1,70 +1,74 @@
-import { useEffect, useRef } from "react";
-import styles from "./Concept.module.css";
+import { FC } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import styles from './Concept.module.css';
 
-// Иконки (предварительно сохранить SVG-файлы)
-import videoCallIcon from "../../assets/icons/video-call.svg";
-import screenShareIcon from "../../assets/icons/screen-share.svg";
-import brainIcon from "../../assets/icons/brain.svg";
+interface Slide {
+  image: string;
+  title: string;
+  subtitle: string;
+}
 
-const Concept = () => {
-  const sectionRef = useRef<HTMLElement | null>(null);
+const slides: Slide[] = [
+  {
+    image: 'https://source.unsplash.com/random/800x600?mentor',
+    title: 'Он созванивается с тобой',
+    subtitle: 'Наставник — как коллега по Zoom',
+  },
+  {
+    image: 'https://source.unsplash.com/random/800x601?screen',
+    title: 'Показывает экран',
+    subtitle: 'Учитесь на практике, не в теории',
+  },
+  {
+    image: 'https://source.unsplash.com/random/800x602?explain',
+    title: 'Объясняет на пальцах',
+    subtitle: 'Без воды — по делу',
+  },
+  {
+    image: 'https://source.unsplash.com/random/800x603?work',
+    title: 'Ты делаешь, он направляет',
+    subtitle: 'Работа над реальными задачами',
+  },
+  {
+    image: 'https://source.unsplash.com/random/800x604?project',
+    title: 'Реальные задачи — как на работе',
+    subtitle: 'Тренируешься, как в бою',
+  },
+];
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add(styles.visible);
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
-
-    const elements = sectionRef.current?.querySelectorAll(`.${styles.card}`);
-    elements?.forEach((el) => observer.observe(el));
-
-    return () => {
-      elements?.forEach((el) => observer.unobserve(el));
-    };
-  }, []);
-
+const Concept: FC = () => {
   return (
-    <section className={styles.concept} ref={sectionRef}>
-      <h2 className={styles.title}>Обучение, которое работает</h2>
-
-      <p className={styles.description}>
-        Ты пользуешься приложениями каждый день.<br />
-        Кто-то придумал, как они устроены.<br />
-        <span className={styles.highlight}>Теперь этот «кто-то» — твой личный наставник.</span>
-      </p>
-
-      <div className={styles.cards}>
-        <div className={styles.card}>
-          <img src={videoCallIcon} alt="Созвон" className={styles.icon} />
-          <p className={styles.cardText}>Он созванивается с тобой</p>
-        </div>
-        <div className={styles.card}>
-          <img src={screenShareIcon} alt="Демонстрация экрана" className={styles.icon} />
-          <p className={styles.cardText}>Показывает экран</p>
-        </div>
-        <div className={styles.card}>
-          <img src={brainIcon} alt="Объяснение" className={styles.icon} />
-          <p className={styles.cardText}>Объясняет на пальцах — как коллеге</p>
-        </div>
-      </div>
-
-      <div className={styles.noteBlock}>
-        <p className={styles.accentLine}>Это не классический массовый курс!</p>
-        <p className={styles.note}>
-          Это личная передача знаний и опыта от продактов из Яндекса, Авито, ВКонтакте.<br />
-          Так учатся те, кто действительно хочет войти в профессию.
+    <section className={styles.concept}>
+      <div className={styles.textBlock}>
+        <h2 className={styles.title}>Обучение, которое работает</h2>
+        <p className={styles.description}>
+          Ты пользуешься приложениями каждый день. Кто-то придумал, как они устроены.
+          <br />
+          <span className={styles.highlight}>Теперь этот «кто-то» — твой личный наставник.</span>
         </p>
       </div>
+      <Swiper
+        className={styles.slider}
+        modules={[Pagination]}
+        spaceBetween={24}
+        slidesPerView={1}
+        pagination={{ clickable: true }}
+      >
+        {slides.map((slide) => (
+          <SwiperSlide key={slide.title} className={styles.slide}>
+            <div className={styles.card}>
+              <img src={slide.image} alt={slide.title} className={styles.image} />
+              <h3 className={styles.cardTitle}>{slide.title}</h3>
+              <p className={styles.cardSubtitle}>{slide.subtitle}</p>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </section>
   );
 };
 
 export default Concept;
-
-
