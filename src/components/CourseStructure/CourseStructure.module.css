@@ -1,4 +1,5 @@
 .structure {
+    min-height: 100vh;
     background: #fdfbfb;
     padding: 100px 20px;
   }
