@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
+import { Pagination, Keyboard } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import styles from './Concept.module.css';
@@ -52,10 +52,11 @@ const Concept: FC = () => {
       </div>
       <Swiper
         className={styles.slider}
-        modules={[Pagination]}
+        modules={[Pagination, Keyboard]}
         spaceBetween={24}
         slidesPerView={1}
         pagination={{ clickable: true }}
+        keyboard={{ enabled: true }}
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.title} className={styles.slide}>
