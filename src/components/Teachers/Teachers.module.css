@@ -1,4 +1,5 @@
 .teachers {
+    min-height: 100vh;
     padding: 100px 20px;
     background-color: #fdfbfb;
     max-width: 1200px;

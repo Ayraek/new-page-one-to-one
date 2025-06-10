@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  height: 80vh; /* занимать ~80% высоты экрана */
+  min-height: 100vh;
   background: linear-gradient(135deg, #fdfbfb 0%, #a6d2e8 100%);
   padding-top: 100px; /* под хедер */
   display: flex;
