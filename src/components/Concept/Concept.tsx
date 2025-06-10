@@ -13,27 +13,27 @@ interface Slide {
 
 const slides: Slide[] = [
   {
-    image: 'https://source.unsplash.com/random/800x600?mentor',
+    image: 'https://picsum.photos/seed/mentor/800/600',
     title: 'Он созванивается с тобой',
     subtitle: 'Наставник — как коллега по Zoom',
   },
   {
-    image: 'https://source.unsplash.com/random/800x601?screen',
+    image: 'https://picsum.photos/seed/screen/800/601',
     title: 'Показывает экран',
     subtitle: 'Учитесь на практике, не в теории',
   },
   {
-    image: 'https://source.unsplash.com/random/800x602?explain',
+    image: 'https://picsum.photos/seed/explain/800/602',
     title: 'Объясняет на пальцах',
     subtitle: 'Без воды — по делу',
   },
   {
-    image: 'https://source.unsplash.com/random/800x603?work',
+    image: 'https://picsum.photos/seed/work/800/603',
     title: 'Ты делаешь, он направляет',
     subtitle: 'Работа над реальными задачами',
   },
   {
-    image: 'https://source.unsplash.com/random/800x604?project',
+    image: 'https://picsum.photos/seed/project/800/604',
     title: 'Реальные задачи — как на работе',
     subtitle: 'Тренируешься, как в бою',
   },
