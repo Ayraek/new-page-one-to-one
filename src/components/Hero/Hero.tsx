@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
           <h1 className={styles.title}>
             Профессия “Продакт-менеджер”
             <br />
-            <span className={styles.subtitle}>под руководством наставника</span>
+            <span className={styles.subtitle}>под руководством наставника-практика</span>
           </h1>
           <p className={styles.description}>
             Индивидуальное обучение с наставником из Яндекса, Авито и VK
