@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Hero.module.css';
-import HeroImage from '../../assets/Hero.svg';
+import HeroImage from '../../assets/Hero.svg'; // SVG используется как путь
 import ConsultationForm from '../ConsultationForm/ConsultationForm';
 
 const Hero: React.FC = () => {
@@ -26,7 +26,8 @@ const Hero: React.FC = () => {
         </div>
 
         <div className={styles.imageContainer}>
-          <img src={HeroImage} alt="Hero image" />
+          {/* ✅ правильное отображение SVG как изображения */}
+          <img src={HeroImage} alt="Hero image" className={styles.heroImage} />
         </div>
       </div>
     </section>
@@ -34,6 +35,7 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
+
 
 
 
