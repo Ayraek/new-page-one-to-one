@@ -64,11 +64,17 @@
   background-color: #333;
 }
 
+
 .imageContainer {
   flex: 1;
   min-width: 280px;
   display: flex;
   justify-content: flex-end;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  align-items: flex-end;
 }
 
 .imageContainer img {
@@ -78,6 +84,9 @@
 }
 
 .heroImage {
-  max-width: 100%;
+  max-width: none;
+  width: 100%;
   height: auto;
+  transform: scale(2);
+  transform-origin: bottom center;
 }
