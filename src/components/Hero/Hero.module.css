@@ -87,6 +87,6 @@
   max-width: none;
   width: 100%;
   height: auto;
-  transform: scale(2);
+  transform: scale(1);
   transform-origin: bottom center;
 }
