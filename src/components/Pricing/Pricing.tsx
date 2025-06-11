@@ -48,7 +48,7 @@ const plans = [
 
 const Pricing: React.FC = () => {
   return (
-    <section className={styles.pricing}>
+    <section id="Price" className={styles.pricing}>
       <h2 className={styles.title}>Стоимость</h2>
       <div className={styles.grid}>
         {plans.map((plan, index) => (

@@ -27,7 +27,7 @@ const teachers = [
 
 const Teachers: React.FC = () => {
   return (
-    <section className={styles.teachers}>
+    <section id="Teachers" className={styles.teachers}>
       <h2 className={styles.title}>Преподаватели</h2>
       <div className={styles.grid}>
         {teachers.map((teacher, index) => (
