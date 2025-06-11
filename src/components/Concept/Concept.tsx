@@ -1,4 +1,4 @@
-import { FC, useRef } from 'react';
+import React, { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import type { Swiper as SwiperType } from 'swiper';
 import { Pagination, Keyboard } from 'swiper/modules';
@@ -40,8 +40,8 @@ const slides: Slide[] = [
   },
 ];
 
-const Concept: FC = () => {
-  const swiperRef = useRef<SwiperType>();
+const Concept: React.FC = () => {
+  const swiperRef = useRef<SwiperType | null>(null);
 
   return (
     <section className={styles.concept}>
