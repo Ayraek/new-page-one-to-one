@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Hero.module.css';
-import Illustration from '../../assets/illustration.svg';
+import HeroImage from '../../assets/Hero.svg';
 import ConsultationForm from '../ConsultationForm/ConsultationForm';
 
 const Hero: React.FC = () => {
@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
         </div>
 
         <div className={styles.imageContainer}>
-          <img src={Illustration} alt="Hero illustration" />
+          <img src={HeroImage} alt="Hero image" />
         </div>
       </div>
     </section>
