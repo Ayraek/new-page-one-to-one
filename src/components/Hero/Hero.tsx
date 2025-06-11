@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Hero.module.css';
-import HeroImage from '../../assets/Hero.svg'; // SVG используется как путь
+import HeroImage from '../../assets/Hero.png'; // PNG используется как путь
 import ConsultationForm from '../ConsultationForm/ConsultationForm';
 
 const Hero: React.FC = () => {
