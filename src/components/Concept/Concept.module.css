@@ -83,5 +83,5 @@
 }
 
 .slider :global(.swiper-pagination-bullet-active) {
-  background-color: var(--color-accent);
+  background-color: var(--color-text);
 }
