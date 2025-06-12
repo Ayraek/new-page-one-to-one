@@ -1,86 +1,95 @@
 .concept {
-  min-height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px;
-  padding: 60px 40px 60px 120px;
-  width: 100%;
-  font-family: 'Inter', sans-serif;
-  background-color: var(--color-bg-white);
-}
-
-@media (min-width: 768px) {
-  .concept {
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 60px 40px 60px 120px;
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-bg-white);
   }
-}
-
-.textBlock {
-  max-width: 520px;
-}
-
-.title {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 16px;
-  color: #111;
-}
-
-.description {
-  font-size: 18px;
-  line-height: 1.6;
-  color: #555;
-}
-
-.highlight {
-  font-weight: 600;
-  color: #222;
-}
-
-.slider {
-  width: 100%;
-}
-
-.card {
-  background: rgba(224, 224, 224, 0.5);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 20px;
-  overflow: hidden;
-  text-align: center;
-  padding: 40px;
-  cursor: pointer;
-}
-
-.image {
-  width: 100%;
-  height: 440px;
-  object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 16px;
-}
-
-.cardTitle {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 8px;
-  color: #111;
-}
-
-.cardSubtitle {
-  font-size: 14px;
-  color: #666;
-}
-
-/* Увеличенные точки пагинации */
-.slider :global(.swiper-pagination-bullet) {
-  width: 16px;
-  height: 16px;
-  margin: 0 6px;
-}
-
-.slider :global(.swiper-pagination-bullet-active) {
-  background-color: var(--color-text);
-}
+  
+  @media (min-width: 768px) {
+    .concept {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+  }
+  
+  .textBlock {
+    max-width: 520px;
+  }
+  
+  .title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #111;
+  }
+  
+  .description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  .highlight {
+    font-weight: 600;
+    color: #222;
+  }
+  
+  .slider {
+    width: 100%;
+  }
+  
+  .card {
+    background: rgba(255, 255, 255, 0.6); /* Более плотный белый */
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(200, 200, 200, 0.4); /* Светлая стеклянная рамка */
+    border-radius: 24px;
+    overflow: hidden;
+    text-align: center;
+    padding: 40px 24px;
+    cursor: pointer;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2); /* Глубокая тень */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.03);
+    opacity: 1;
+  }
+  
+  .image {
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 16px;
+  }
+  
+  .cardTitle {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #111;
+  }
+  
+  .cardSubtitle {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* Увеличенные точки пагинации */
+  .slider :global(.swiper-pagination-bullet) {
+    width: 16px;
+    height: 16px;
+    margin: 0 6px;
+  }
+  
+  .slider :global(.swiper-pagination-bullet-active) {
+    background-color: var(--color-text);
+  }
+  
+  
