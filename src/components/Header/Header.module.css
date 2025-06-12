@@ -13,7 +13,7 @@
     max-width: 1280px;
     margin: 0 auto;
     box-sizing: border-box;
-    right: 0; /* Для центрирования */
+    right: 0;
     left: 0;
   }
   
@@ -23,7 +23,7 @@
     color: #111;
   }
   
-.button {
+  .button {
     background-color: #111;
     color: #fff;
     font-weight: 500;
@@ -33,20 +33,30 @@
     border-radius: 999px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
-
-.nav {
+  }
+  
+  .nav {
     display: flex;
     gap: 24px;
-}
-
-.link {
-    color: #111;
-    font-size: 14px;
+  }
+  
+  .link {
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
     font-weight: 500;
+    color: #111;
     text-decoration: none;
-}
-
-.link:hover {
-    text-decoration: underline;
-}
+    padding: 8px 20px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .link:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+  }
+  
