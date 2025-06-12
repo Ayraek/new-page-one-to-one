@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 40px;
-  padding: 60px 20px;
+  padding: 60px 40px 60px 20px;
   width: 100%;
   font-family: 'Inter', sans-serif;
   background-color: var(--color-bg-white);
