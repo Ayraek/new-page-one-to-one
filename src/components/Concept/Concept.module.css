@@ -4,8 +4,7 @@
   grid-template-columns: 1fr;
   gap: 40px;
   padding: 60px 20px;
-  max-width: 1280px;
-  margin: 0 auto;
+  width: 100%;
   font-family: 'Inter', sans-serif;
   background-color: var(--color-bg-white);
 }
