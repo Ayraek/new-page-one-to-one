@@ -7,6 +7,7 @@
   max-width: 1280px;
   margin: 0 auto;
   font-family: 'Inter', sans-serif;
+  background-color: var(--color-bg-white);
 }
 
 @media (min-width: 768px) {
@@ -43,7 +44,7 @@
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(224, 224, 224, 0.5);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.3);
