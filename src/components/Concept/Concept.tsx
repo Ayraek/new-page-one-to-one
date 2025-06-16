@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import type { Swiper as SwiperType } from 'swiper';
 import { Pagination, Keyboard } from 'swiper/modules';
@@ -16,6 +16,35 @@ const slides = [
 
 const Concept: React.FC = () => {
   const swiperRef = useRef<SwiperType | null>(null);
+
+  useEffect(() => {
+    const path = document.getElementById('conceptNeonPath');
+    let mouseX = 0;
+
+    const handleMouseMove = (e: MouseEvent) => {
+      mouseX = e.clientX / window.innerWidth;
+    };
+
+    const animate = () => {
+      if (path) {
+        const curve1 = 5 + Math.sin(mouseX * Math.PI * 2) * 10;
+        const curve2 = 5 - Math.sin(mouseX * Math.PI * 2) * 10;
+
+        path.setAttribute(
+          'd',
+          `M0 5 Q 250 ${curve1} 500 5 Q 250 ${curve2} 0 5`
+        );
+      }
+      requestAnimationFrame(animate);
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    animate();
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
 
   return (
     <section className={styles.concept}>
@@ -47,6 +76,19 @@ const Concept: React.FC = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+        <svg
+          className={styles.neonLine}
+          viewBox="0 0 500 10"
+          preserveAspectRatio="none"
+        >
+          <path
+            id="conceptNeonPath"
+            d="M0 5 Q 250 5 500 5 Q 250 5 0 5"
+            fill="transparent"
+            stroke="#00f0ff"
+            strokeWidth="2"
+          />
+        </svg>
       </div>
     </section>
   );
