@@ -32,7 +32,7 @@ const Concept: React.FC = () => {
 
         path.setAttribute(
           'd',
-          `M0 5 Q 250 ${curve1} 500 5 Q 250 ${curve2} 0 5`
+          `M0 0 Q 250 ${curve1} 500 5 Q 250 ${curve2} 0 10`
         );
       }
       requestAnimationFrame(animate);
@@ -83,7 +83,7 @@ const Concept: React.FC = () => {
         >
           <path
             id="conceptNeonPath"
-            d="M0 5 Q 250 5 500 5 Q 250 5 0 5"
+            d="M0 0 Q 250 5 500 5 Q 250 5 0 10"
             fill="transparent"
             stroke="#00f0ff"
             strokeWidth="2"
