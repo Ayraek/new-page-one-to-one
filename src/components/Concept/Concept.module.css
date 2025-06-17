@@ -93,12 +93,29 @@
     color: #666;
   }
   
-  .slider :global(.swiper-pagination-bullet) {
-    width: 10px;
-    height: 10px;
-    margin: 0 4px;
-    background: #ccc;
-  }
+
+/* Swiper pagination bullets */
+.slider :global(.swiper-pagination-bullet) {
+  width: 10px;
+  height: 10px;
+  margin: 0;
+  background: #ccc;
+}
+
+/* Container for Swiper bullets */
+.slider :global(.swiper-pagination) {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  padding: 4px 12px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  z-index: 1;
+}
   
   .slider :global(.swiper-pagination-bullet-active) {
     background: #000;
