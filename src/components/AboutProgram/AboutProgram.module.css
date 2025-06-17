@@ -1,7 +1,9 @@
-.programs {
-    min-height: 100vh;
-    background: #fdfbfb;
-    padding: 100px 20px;
+.aboutProgram {
+    margin-top: 0;          /* Никакого внешнего отступа вверх */
+    padding-top: 100px;     /* Внутренний отступ, чтобы контент не прилипал */
+    background: #ffffff;    /* Или свой цвет, если у тебя другой */
+    position: relative;
+    z-index: 2;
   }
   
   .title {

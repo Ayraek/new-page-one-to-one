@@ -1,14 +1,18 @@
-  .concept {
+.concept {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     gap: 40px;
-    padding: 60px 0 100px; /* extra bottom space so pagination isn't flush */
+    padding: 40px 0 0; /* Убираем нижний внутренний отступ */
+    margin-bottom: 100px; /* Добавляем белую зону вниз */
     width: 100%;
     font-family: 'Inter', sans-serif;
     background: linear-gradient(to bottom, #f0f0f0 0%, #ffffff 100%);
     align-items: flex-start;
+    position: relative;
+    z-index: 1;
   }
+  
   
   .textBlock {
     padding-left: 80px;
@@ -130,6 +134,17 @@
     height: 40px;
     z-index: 0;
     filter: blur(4px);
+  }
+
+  .concept::after {
+    content: "";
+    position: absolute;
+    bottom: -60px; /* тянется в AboutProgram */
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(to bottom, #ffffff 0%, #ffffff 100%);
+    z-index: 0;
   }
   
   
