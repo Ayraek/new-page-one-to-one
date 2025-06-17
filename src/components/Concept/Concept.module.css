@@ -1,9 +1,9 @@
-.concept {
+  .concept {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     gap: 40px;
-    padding: 60px 0;
+    padding: 60px 0 100px; /* extra bottom space so pagination isn't flush */
     width: 100%;
     font-family: 'Inter', sans-serif;
     background: linear-gradient(to bottom, #f0f0f0 0%, #ffffff 100%);
