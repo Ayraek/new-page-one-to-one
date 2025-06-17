@@ -30,7 +30,7 @@
     padding: 12px 24px;
     font-size: 14px;
     border: none;
-    border-radius: 999px;
+    border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
@@ -47,7 +47,7 @@
     color: #111;
     text-decoration: none;
     padding: 8px 20px;
-    border-radius: 16px;
+    border-radius: 4px;
     background: rgba(255, 255, 255, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
