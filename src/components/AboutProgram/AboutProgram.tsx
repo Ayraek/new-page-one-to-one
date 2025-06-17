@@ -23,7 +23,7 @@ const AboutProgram: React.FC = () => {
   const [showProgram, setShowProgram] = useState(false);
 
   return (
-    <section id="AboutProgram" className={styles.programs}>
+    <section id="AboutProgram" className={styles.aboutProgram}>
       {showProgram && <ProgramModal onClose={() => setShowProgram(false)} />}
       <h2 className={styles.title}>Программы обучения</h2>
       <div className={styles.grid}>
