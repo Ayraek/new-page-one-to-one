@@ -1,6 +1,6 @@
 .aboutProgram {
     margin-top: 0;          /* Никакого внешнего отступа вверх */
-    padding-top: 100px;     /* Внутренний отступ, чтобы контент не прилипал */
+    padding-top: 40px;      /* Меньший внутренний отступ */
     background: linear-gradient(to bottom, #f0f0f0 0%, #ffffff 100%);
     position: relative;
     z-index: 2;
