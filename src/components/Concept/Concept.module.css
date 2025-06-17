@@ -110,6 +110,8 @@
   transform: translateX(-50%);
   display: flex;
   gap: 8px;
+  width: fit-content;
+  justify-content: center;
   padding: 4px 12px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 12px;
