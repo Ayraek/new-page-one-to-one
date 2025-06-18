@@ -1,4 +1,8 @@
 .aboutProgram {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
     margin-top: 0;          /* Никакого внешнего отступа вверх */
     padding-top: 40px;      /* Меньший внутренний отступ */
     background: linear-gradient(to bottom, #ffffff 0%, #f0f0f0 100%);
