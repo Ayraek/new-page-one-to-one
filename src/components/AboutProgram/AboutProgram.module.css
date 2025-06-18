@@ -5,7 +5,7 @@
     gap: 40px;
     margin-top: 0;          /* Никакого внешнего отступа вверх */
     padding-top: 40px;      /* Меньший внутренний отступ */
-    background: linear-gradient(to bottom, #ffffff 0%, #f0f0f0 100%);
+    background: linear-gradient(to bottom, #f0f0f0 0%, #ffffff 100%);
     position: relative;
     z-index: 2;
   }
