@@ -58,6 +58,7 @@
   align-items: flex-start;
   padding-top: 24px;
   text-align: center;
+  cursor: pointer;
 }
 
 .label {
@@ -86,16 +87,28 @@
   z-index: 5;
 }
 
+.center:hover {
+  transform: translateX(-50%) scale(1.2);
+}
+
 .leftMid {
   left: 50%;
   transform: translateX(-125%) scale(0.95);
   z-index: 3;
 }
 
+.leftMid:hover {
+  transform: translateX(-125%) scale(1.05);
+}
+
 .rightMid {
   left: 50%;
   transform: translateX(25%) scale(0.95);
   z-index: 3;
+}
+
+.rightMid:hover {
+  transform: translateX(25%) scale(1.05);
 }
 
 .left {
@@ -105,11 +118,19 @@
   opacity: 0.7;
 }
 
+.left:hover {
+  transform: translateX(-200%) scale(0.9);
+}
+
 .right {
   left: 50%;
   transform: translateX(100%) scale(0.85);
   z-index: 1;
   opacity: 0.7;
+}
+
+.right:hover {
+  transform: translateX(100%) scale(0.9);
 }
 
 .neonLine {
