@@ -50,14 +50,23 @@ const Concept: React.FC = () => {
           keyboard={{ enabled: true }}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
         >
-          {slides.map((slide, index) => (
-            <SwiperSlide key={index} className={styles.slide}>
-              <div className={styles.card}>
-                <h3 className={styles.cardTitle}>{slide.title}</h3>
-                <p className={styles.cardSubtitle}>{slide.subtitle}</p>
-              </div>
-            </SwiperSlide>
-          ))}
+          {slides.map((slide, index) => {
+            let cardClass = styles.card;
+            if (index === 1 || index === 4) {
+              cardClass = `${styles.card} ${styles.cardNarrow}`;
+            } else if (index === 2) {
+              cardClass = `${styles.card} ${styles.cardMedium}`;
+            }
+
+            return (
+              <SwiperSlide key={index} className={styles.slide}>
+                <div className={cardClass}>
+                  <h3 className={styles.cardTitle}>{slide.title}</h3>
+                  <p className={styles.cardSubtitle}>{slide.subtitle}</p>
+                </div>
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
 
         <div className={styles.neonLine}>
