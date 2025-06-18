@@ -1,9 +1,9 @@
-import React, { useRef } from 'react';
+import { FC, useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Float } from '@react-three/drei';
 import { Mesh } from 'three';
 
-const RotatingTetrahedron: React.FC = () => {
+const RotatingTetrahedron: FC = () => {
   const ref = useRef<Mesh>(null!);
   useFrame(() => {
     if (ref.current) {
@@ -19,7 +19,7 @@ const RotatingTetrahedron: React.FC = () => {
   );
 };
 
-const FloatingObjects: React.FC = () => {
+const FloatingObjects: FC = () => {
   return (
     <Canvas className="floatingCanvas" camera={{ position: [0, 0, 6] }}>
       <ambientLight intensity={0.5} />
