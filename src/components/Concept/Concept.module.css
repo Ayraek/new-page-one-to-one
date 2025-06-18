@@ -85,6 +85,14 @@
     cursor: pointer;
     transition: transform 0.3s ease;
   }
+
+  .cardNarrow {
+    width: 25vw;
+  }
+
+  .cardMedium {
+    width: 30vw;
+  }
   
   .cardTitle {
     font-size: 18px;
