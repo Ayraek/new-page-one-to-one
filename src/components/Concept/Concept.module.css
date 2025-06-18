@@ -109,10 +109,11 @@
 
 /* Swiper pagination bullets */
 .slider :global(.swiper-pagination-bullet) {
-  width: 10px;
-  height: 10px;
+  width: 16px;
+  height: 16px;
   margin: 0;
   background: #ccc;
+  border-radius: 50%;
 }
 
 /* Container for Swiper bullets */
@@ -125,15 +126,16 @@
   gap: 8px;
   width: fit-content;
   justify-content: center;
-  padding: 4px 12px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
-  backdrop-filter: blur(8px);
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  backdrop-filter: none;
   z-index: 1;
 }
-  
+
   .slider :global(.swiper-pagination-bullet-active) {
     background: #000;
+    box-shadow: 0 0 0 2px #ccc;
   }
 
   .neonLine {
