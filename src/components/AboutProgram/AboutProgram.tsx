@@ -25,7 +25,7 @@ const AboutProgram: React.FC = () => {
   return (
     <section id="AboutProgram" className={styles.aboutProgram}>
       {showProgram && <ProgramModal onClose={() => setShowProgram(false)} />}
-      <h2 className={styles.title}>Программы обучения</h2>
+      <h2 className={styles.title}>Программы академии</h2>
       <div className={styles.grid}>
         {programs.map((program, index) => (
           <div key={index} className={styles.card}>
