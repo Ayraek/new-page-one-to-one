@@ -13,7 +13,8 @@
   .title {
     font-size: 36px;
     font-weight: 800;
-    text-align: center;
+    text-align: right;
+    padding-right: 80px;
     margin-bottom: 50px;
     color: #111;
   }
