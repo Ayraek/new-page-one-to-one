@@ -1,6 +1,7 @@
   .structure {
       min-height: 100vh;
-      background: linear-gradient(to bottom, #ffffff 0%, #f0f0f0 100%);
+  /* Gradient starts with a soft grey at the top and fades to white */
+  background: linear-gradient(to bottom, #f0f0f0 0%, #ffffff 100%);
       padding: 100px 20px;
     }
   
