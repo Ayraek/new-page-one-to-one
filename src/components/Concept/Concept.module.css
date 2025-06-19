@@ -3,8 +3,8 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
-    padding: 40px 0 0; /* Убираем нижний внутренний отступ */
-    margin-bottom: 0; /* Убираем лишний отступ вниз */
+    padding: 40px 0 0;
+    margin-bottom: 0;
     width: 100%;
     font-family: 'Inter', sans-serif;
     background: linear-gradient(to bottom, #f0f0f0 0%, #ffffff 100%);
@@ -12,7 +12,6 @@
     position: relative;
     z-index: 1;
   }
-  
   
   .textBlock {
     padding-left: 80px;
@@ -25,7 +24,7 @@
     font-weight: 700;
     margin-bottom: 16px;
     color: #111;
-    white-space: normal;        /* ✅ строка не обрезается */
+    white-space: normal;
     overflow: visible;
     text-overflow: unset;
   }
@@ -34,7 +33,7 @@
     font-size: 18px;
     line-height: 1.6;
     color: #555;
-    white-space: normal;        /* ✅ многострочное описание */
+    white-space: normal;
   }
   
   .highlight {
@@ -47,18 +46,17 @@
   
   .sliderWrapper {
     width: 100vw;
-    overflow: hidden; /* 👈 добавили */
+    overflow: hidden;
     position: relative;
   }
   
-  
   .slider {
     width: 100vw;
-    padding: 40px 0 40px; /* 👈 добавлен верхний паддинг */
+    padding: 40px 0 40px;
     overflow: hidden;
     display: flex;
     align-items: center;
-  }  
+  }
   
   .slide {
     width: auto !important;
@@ -69,7 +67,7 @@
   .card {
     width: 50vw;
     max-width: 600px;
-  height: 420px; /* Ещё увеличена высота карточек */
+    height: 420px;
     padding: 32px;
     border-radius: 24px;
     text-align: center;
@@ -77,23 +75,29 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    /* Slightly reduce the default shadow */
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
     display: flex;
     flex-direction: column;
     justify-content: center;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+    /* 🎯 Неоновая тень */
+    box-shadow:
+      0 0 12px rgba(0, 212, 255, 0.4),
+      0 0 24px rgba(0, 123, 255, 0.3);
   }
-
+  
   .card:hover {
     transform: translateY(-5px);
+    box-shadow:
+      0 0 16px rgba(0, 212, 255, 0.7),
+      0 0 32px rgba(0, 123, 255, 0.6);
   }
-
+  
   .cardNarrow {
     width: 25vw;
   }
-
+  
   .cardMedium {
     width: 30vw;
   }
@@ -109,48 +113,5 @@
     font-size: 14px;
     color: #666;
   }
-  
-
-/* Swiper pagination bullets */
-.slider :global(.swiper-pagination-bullet) {
-  width: 16px;
-  height: 16px;
-  margin: 0;
-  background: #ccc;
-  border-radius: 50%;
-}
-
-/* Container for Swiper bullets */
-.slider :global(.swiper-pagination) {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
-  width: fit-content;
-  justify-content: center;
-  padding: 0;
-  background: transparent;
-  border-radius: 0;
-  backdrop-filter: none;
-  z-index: 1;
-}
-
-  .slider :global(.swiper-pagination-bullet-active) {
-    background: #000;
-    box-shadow: 0 0 0 2px #ccc;
-  }
-
-  .neonLine {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-    height: 40px;
-    z-index: 0;
-    filter: blur(4px);
-  }
-
-  /* Псевдоэлемент убран, чтобы не оставался белый градиент между секциями */
   
   

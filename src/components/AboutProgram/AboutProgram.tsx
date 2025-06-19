@@ -4,11 +4,11 @@ import ProgramModal from '../ProgramModal/ProgramModal';
 
 const programs = [
   {
-    title: 'С нуля до Junior/Middle',
+    title: 'Product-manager с нуля',
     audience: 'Новички, студенты, начинающие менеджеры',
-    duration: '3–4 месяца, 1 встреча в неделю',
-    format: 'Индивидуальные Zoom-сессии, чат с наставником в Telegram',
-    certificate: 'Удостоверение о повышении квалификации (при наличии лицензии)',
+    duration: '2 - 4 месяца, 1-3 встречи в неделю',
+    format: 'Индивидуальные Goolge meet-сессии, чат с наставником в Telegram',
+    certificate: 'Диплом об окончании обучения',
   },
   {
     title: 'Senior программа',
@@ -29,7 +29,7 @@ const AboutProgram: React.FC = () => {
       <div className={styles.grid}>
         {programs.map((program, index) => (
           <div key={index} className={styles.card}>
-            <h3>{program.title}</h3>
+            <h3 className={styles.cardTitle}>{program.title}</h3>
             <div className={styles.item}>
               <span>Для кого:</span>
               <p>{program.audience}</p>
@@ -46,7 +46,7 @@ const AboutProgram: React.FC = () => {
               <span>Документ:</span>
               <p>{program.certificate}</p>
             </div>
-            <button className={styles.cta} onClick={() => setShowProgram(true)}>
+            <button className={styles.button} onClick={() => setShowProgram(true)}>
               Подробнее
             </button>
           </div>
@@ -57,4 +57,5 @@ const AboutProgram: React.FC = () => {
 };
 
 export default AboutProgram;
+
 

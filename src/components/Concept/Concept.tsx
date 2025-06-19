@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import type { Swiper as SwiperType } from 'swiper';
 import { Pagination, Keyboard } from 'swiper/modules';
@@ -16,18 +16,6 @@ const slides = [
 
 const Concept: React.FC = () => {
   const swiperRef = useRef<SwiperType | null>(null);
-
-  useEffect(() => {
-    const path = document.getElementById('conceptNeonPath');
-
-    if (path) {
-      // Линия проходит по центру карточек и уходит вверх вправо
-      path.setAttribute(
-        'd',
-        'M0 0 C 1000 20, 100 -10, 1600 10'
-      );
-    }
-  }, []);
 
   return (
     <section className={styles.concept}>
@@ -48,6 +36,7 @@ const Concept: React.FC = () => {
           spaceBetween={24}
           pagination={{ clickable: true }}
           keyboard={{ enabled: true }}
+          // Привязка swiper instance к useRef (восстановлено)
           onSwiper={(swiper) => (swiperRef.current = swiper)}
         >
           {slides.map((slide, index) => {
@@ -68,28 +57,9 @@ const Concept: React.FC = () => {
             );
           })}
         </Swiper>
-
-        <div className={styles.neonLine}>
-          <svg width="100%" height="200" viewBox="0 0 1600 200" preserveAspectRatio="none">
-            <defs>
-              <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#00d4ff" />
-                <stop offset="100%" stopColor="#007bff" />
-              </linearGradient>
-            </defs>
-            <path
-              id="conceptNeonPath"
-              fill="transparent"
-              stroke="url(#neonGradient)"
-              strokeWidth="8"
-            />
-          </svg>
-        </div>
       </div>
     </section>
   );
 };
 
 export default Concept;
-
-
