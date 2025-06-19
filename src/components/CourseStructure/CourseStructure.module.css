@@ -1,8 +1,8 @@
-.structure {
-    min-height: 100vh;
-    background: #fdfbfb;
-    padding: 100px 20px;
-  }
+  .structure {
+      min-height: 100vh;
+      background: linear-gradient(to bottom, #ffffff 0%, #f0f0f0 100%);
+      padding: 100px 20px;
+    }
   
   .title {
     font-size: 36px;
