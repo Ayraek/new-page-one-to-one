@@ -18,6 +18,7 @@ const slides = [
     image: shareImg,
     title: 'Он делится опытом',
     subtitle: 'Показывает, как решает задачи сам',
+    size: 'half',
   },
   {
     title: 'Показывает экран',
