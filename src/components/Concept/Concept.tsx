@@ -40,12 +40,7 @@ const slides = [
     title: 'Ты делаешь, он направляет',
     subtitle: 'Работа над реальными задачами',
     size: 'seventy',
-  },
-  {
-    title: 'Реальные задачи — как на работе',
-    subtitle: 'Тренируешься, как в бою',
-    size: 'full',
-  },
+  }
 ];
 
 const Concept: React.FC = () => {
