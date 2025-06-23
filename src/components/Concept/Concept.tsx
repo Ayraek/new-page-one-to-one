@@ -7,6 +7,7 @@ import 'swiper/css/pagination';
 import styles from './Concept.module.css';
 import sozvonImg from '../../assets/images/concept/sozvon.jpg';
 import shareImg from '../../assets/images/concept/Share.jpg'; // ← новая картинка
+import prostoImg from '../../assets/images/concept/prosto.jpg';
 
 const slides = [
   {
@@ -21,6 +22,7 @@ const slides = [
     size: 'half',
   },
   {
+    image: prostoImg,
     title: 'Показывает экран',
     subtitle: 'Учитесь на практике, не в теории',
     size: 'half',
