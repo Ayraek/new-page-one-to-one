@@ -8,6 +8,7 @@ import styles from './Concept.module.css';
 import sozvonImg from '../../assets/images/concept/sozvon.jpg';
 import shareImg from '../../assets/images/concept/Share.jpg'; // ← новая картинка
 import prostoImg from '../../assets/images/concept/prosto.jpg';
+import fingersImg from '../../assets/images/concept/fingers.jpg';
 
 const slides = [
   {
@@ -28,6 +29,7 @@ const slides = [
     size: 'half',
   },
   {
+    image: fingersImg,
     title: 'Объясняет на пальцах',
     subtitle: 'Без воды — по делу',
     size: 'full',
