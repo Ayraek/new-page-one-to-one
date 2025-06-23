@@ -53,9 +53,9 @@
   }
   
   .card {
-    width: 50vw;
-    max-width: 600px;
-    height: 420px;
+    width: 75vw;
+    max-width: 900px;
+    height: 630px;
     padding: 32px;
     border-radius: 24px;
     text-align: center;
@@ -88,15 +88,15 @@
   
   /* Размеры карточек */
   .cardHalf {
-    width: 25vw;
+    width: 37.5vw;
   }
-  
+
   .cardFull {
-    width: 50vw;
+    width: 75vw;
   }
-  
+
   .cardSeventy {
-    width: 35vw;
+    width: 52.5vw;
   }
   
   .cardTitle {
