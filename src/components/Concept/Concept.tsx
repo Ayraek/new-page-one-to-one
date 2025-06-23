@@ -9,6 +9,7 @@ import sozvonImg from '../../assets/images/concept/sozvon.jpg';
 import shareImg from '../../assets/images/concept/Share.jpg'; // ← новая картинка
 import prostoImg from '../../assets/images/concept/prosto.jpg';
 import fingersImg from '../../assets/images/concept/fingers.jpg';
+import lightImg from '../../assets/images/concept/light.jpg';
 
 const slides = [
   {
@@ -35,6 +36,7 @@ const slides = [
     size: 'full',
   },
   {
+    image: lightImg,
     title: 'Ты делаешь, он направляет',
     subtitle: 'Работа над реальными задачами',
     size: 'seventy',
