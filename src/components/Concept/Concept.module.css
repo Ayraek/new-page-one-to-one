@@ -146,4 +146,19 @@
     color: #ddd;
     margin: 0;
   }
+
+  /* Navigation dots styling */
+  :global(.swiper-pagination-bullet) {
+    width: 16px;
+    height: 16px;
+    margin: 0 8px;
+    border-radius: 50%;
+    background: #bfbfbf;
+    opacity: 1;
+  }
+
+  :global(.swiper-pagination-bullet-active) {
+    background: #000;
+    box-shadow: 0 0 0 4px #bfbfbf;
+  }
   
