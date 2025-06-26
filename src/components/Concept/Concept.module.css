@@ -158,7 +158,7 @@
   }
 
   :global(.swiper-pagination) {
-    bottom: -30px; /* Position dots slightly lower */
+    bottom: -40px; /* Position dots slightly lower */
   }
 
   :global(.swiper-pagination-bullet-active) {
