@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import type { Swiper as SwiperType } from 'swiper';
-import { Pagination, Keyboard } from 'swiper/modules';
+import { Pagination, Keyboard, Mousewheel } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import styles from './Concept.module.css';
@@ -64,7 +64,8 @@ const Concept: React.FC = () => {
         spaceBetween={0}
         pagination={{ clickable: true }}
         keyboard
-        modules={[Pagination, Keyboard]}
+        mousewheel={{ forceToAxis: true }}
+        modules={[Pagination, Keyboard, Mousewheel]}
         onBeforeInit={(swiper) => {
           swiperRef.current = swiper;
         }}
