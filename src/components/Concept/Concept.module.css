@@ -157,9 +157,12 @@
     opacity: 1;
   }
 
-  :global(.swiper-pagination) {
-    bottom: -40px; /* Position dots slightly lower */
-  }
+:global(.swiper-pagination) {
+  bottom: -40px; /* Position dots slightly lower */
+  /* Align pagination dots to the right side */
+  text-align: right;
+  padding-right: 40px;
+}
 
   :global(.swiper-pagination-bullet-active) {
     background: #000;
