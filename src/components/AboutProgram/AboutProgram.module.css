@@ -9,7 +9,7 @@
     position: relative;
     z-index: 2;
   }
-  
+
   .title {
     font-size: clamp(24px, 5vw, 40px);
     font-weight: 700;
@@ -17,73 +17,23 @@
     padding-right: 80px;
     margin-bottom: 20px;
     color: #111;
-  }  
-  
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 40px;
   }
-  
-  .card {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 20px;
-    border: 1px solid #e0e0e0;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+
+  .program {
+    padding: 0 80px;
   }
-  
-  .card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
-  }
-  
-  .card h3 {
+
+  .program h3 {
     font-size: 20px;
     font-weight: 600;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
     color: #222;
   }
-  
-  .item {
-    margin-bottom: 16px;
-  }
-  
-  .item span {
-    display: block;
-    font-weight: 600;
-    color: #222;
-    margin-bottom: 4px;
-  }
-  
-  .item p {
+
+  .program p {
     font-size: 16px;
     color: #444;
     line-height: 1.6;
+    margin: 4px 0;
   }
-  
-  .button {
-    background-color: #111;
-    color: #fff;
-    font-weight: 500;
-    padding: 12px 24px;
-    font-size: 14px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: inline-block;
-    width: auto;
-    align-self: flex-start;
-  }
-  
-  .button:hover {
-    background-color: #333;
-  }
-  
 
-  
