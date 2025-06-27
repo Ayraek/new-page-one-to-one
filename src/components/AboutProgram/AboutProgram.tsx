@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './AboutProgram.module.css';
-import ProgramModal from '../ProgramModal/ProgramModal';
 
 const programs = [
   {
@@ -20,38 +19,26 @@ const programs = [
 ];
 
 const AboutProgram: React.FC = () => {
-  const [showProgram, setShowProgram] = useState(false);
-
   return (
     <section id="AboutProgram" className={styles.aboutProgram}>
-      {showProgram && <ProgramModal onClose={() => setShowProgram(false)} />}
       <h2 className={styles.title}>Программы академии</h2>
-      <div className={styles.grid}>
-        {programs.map((program, index) => (
-          <div key={index} className={styles.card}>
-            <h3 className={styles.cardTitle}>{program.title}</h3>
-            <div className={styles.item}>
-              <span>Для кого:</span>
-              <p>{program.audience}</p>
-            </div>
-            <div className={styles.item}>
-              <span>Длительность:</span>
-              <p>{program.duration}</p>
-            </div>
-            <div className={styles.item}>
-              <span>Формат:</span>
-              <p>{program.format}</p>
-            </div>
-            <div className={styles.item}>
-              <span>Документ:</span>
-              <p>{program.certificate}</p>
-            </div>
-            <button className={styles.button} onClick={() => setShowProgram(true)}>
-              Подробнее
-            </button>
-          </div>
-        ))}
-      </div>
+      {programs.map((program, index) => (
+        <div key={index} className={styles.program}>
+          <h3>{program.title}</h3>
+          <p>
+            <strong>Для кого:</strong> {program.audience}
+          </p>
+          <p>
+            <strong>Длительность:</strong> {program.duration}
+          </p>
+          <p>
+            <strong>Формат:</strong> {program.format}
+          </p>
+          <p>
+            <strong>Документ:</strong> {program.certificate}
+          </p>
+        </div>
+      ))}
     </section>
   );
 };
