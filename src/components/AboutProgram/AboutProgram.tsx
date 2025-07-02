@@ -55,16 +55,16 @@ const AboutProgram: React.FC = () => {
     <section id="AboutProgram" className={styles.aboutProgram}>
       {showProgram && <ProgramModal onClose={() => setShowProgram(false)} />}
       <h2 className={styles.title}>Программы академии</h2>
-      <svg className={styles.neonLine} viewBox="0 0 1000 10" preserveAspectRatio="none">
-        <path
-          id="aboutNeonPath"
-          d="M0 5 Q 250 5 500 5 Q 750 5 1000 5"
-          fill="transparent"
-          stroke="#00f0ff"
-          strokeWidth="2"
-        />
-      </svg>
       <div className={styles.grid}>
+        <svg className={styles.neonLine} viewBox="0 0 1000 10" preserveAspectRatio="none">
+          <path
+            id="aboutNeonPath"
+            d="M0 5 Q 250 5 500 5 Q 750 5 1000 5"
+            fill="transparent"
+            stroke="#00f0ff"
+            strokeWidth="2"
+          />
+        </svg>
         {programs.map((program, index) => (
           <div key={index} className={styles.card}>
             <h3 className={styles.cardTitle}>{program.title}</h3>
