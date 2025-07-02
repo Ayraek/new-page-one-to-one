@@ -13,13 +13,16 @@
 
 .modal {
   background: #fff;
-  padding: 24px 32px;
-  border-radius: 8px;
+  padding: 32px 40px;
+  border-radius: 12px;
   width: 100%;
-  max-width: 600px;
+  max-width: 700px;
   max-height: 80vh;
   overflow-y: auto;
   position: relative;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  line-height: 1.6;
+  font-size: 16px;
 }
 
 .close {
@@ -33,21 +36,35 @@
 }
 
 .title {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 700;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
 .list {
   padding-left: 20px;
+  list-style: decimal;
 }
 
 .module {
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
+
+.moduleTitle {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
 
 .subList {
   padding-left: 20px;
-  margin-top: 4px;
+  margin-top: 8px;
+  list-style: disc;
+}
+
+.subList li {
+  margin-bottom: 4px;
 }
