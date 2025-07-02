@@ -80,7 +80,7 @@ const ProgramModal: React.FC<ProgramModalProps> = ({ onClose }) => {
         <ol className={styles.list}>
           {program.map((module, idx) => (
             <li key={idx} className={styles.module}>
-              <strong>{module.title}</strong>
+              <h3 className={styles.moduleTitle}>{module.title}</h3>
               {module.items.length > 0 && (
                 <ol className={styles.subList}>
                   {module.items.map((item, i) => (
