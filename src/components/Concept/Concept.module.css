@@ -159,9 +159,8 @@
 
 :global(.swiper-pagination) {
   bottom: -42px; /* Position dots a bit lower */
-  /* Align pagination dots to the right side */
-  text-align: right;
-  padding-right: 40px;
+  /* Center pagination dots */
+  text-align: center;
 }
 
   :global(.swiper-pagination-bullet-active) {
