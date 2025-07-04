@@ -20,9 +20,9 @@ const CourseStructure: React.FC = () => {
   return (
     <section className={styles.structure}>
       <h2 className={styles.title}>Структура курса</h2>
-      <div className={styles.grid}>
+      <div className={styles.card}>
         {items.map((item, index) => (
-          <div key={index} className={styles.card}>
+          <div key={index} className={styles.item}>
             <h3>{item.title}</h3>
             <p>{item.text}</p>
           </div>
