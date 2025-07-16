@@ -52,7 +52,6 @@
   border-radius: 24px;
   backdrop-filter: blur(10px);
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, opacity 0.3s ease;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -66,20 +65,9 @@
   font-size: 18px;
   font-weight: 700;
   color: #111;
-  animation: fadeIn 1s ease forwards;
   opacity: 0;
 }
 
-@keyframes fadeIn {
-  from {
-    transform: translateY(-10px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 
 .center {
   left: 50%;
@@ -87,9 +75,6 @@
   z-index: 5;
 }
 
-.center:hover {
-  transform: translateX(-50%) scale(1.2);
-}
 
 .leftMid {
   left: 50%;
@@ -97,9 +82,6 @@
   z-index: 3;
 }
 
-.leftMid:hover {
-  transform: translateX(-125%) scale(1.05);
-}
 
 .rightMid {
   left: 50%;
@@ -107,9 +89,6 @@
   z-index: 3;
 }
 
-.rightMid:hover {
-  transform: translateX(25%) scale(1.05);
-}
 
 .left {
   left: 50%;
@@ -118,9 +97,6 @@
   opacity: 0.7;
 }
 
-.left:hover {
-  transform: translateX(-200%) scale(0.9);
-}
 
 .right {
   left: 50%;
@@ -129,9 +105,6 @@
   opacity: 0.7;
 }
 
-.right:hover {
-  transform: translateX(100%) scale(0.9);
-}
 
 .neonLine {
   position: absolute;
