@@ -1,7 +1,8 @@
 .teachers {
     min-height: 100vh;
     padding: 100px 20px;
-    background-color: #fdfbfb;
+    /* Smooth gradient from white at the top to light grey at the bottom */
+    background: linear-gradient(to bottom, #ffffff 0%, #f0f0f0 100%);
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
