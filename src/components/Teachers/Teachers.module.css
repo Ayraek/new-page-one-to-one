@@ -3,8 +3,7 @@
     padding: 100px 20px;
     /* Smooth gradient from white at the top to light grey at the bottom */
     background: linear-gradient(to bottom, #ffffff 0%, #f0f0f0 100%);
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
     text-align: center;
   }
   
@@ -19,6 +18,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
   }
   
   .card {
