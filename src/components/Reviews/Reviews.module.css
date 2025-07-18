@@ -1,7 +1,8 @@
 .reviews {
     min-height: 100vh;
     padding: 100px 20px;
-    background-color: #fdfbfb;
+    /* Match Teachers section background */
+    background: linear-gradient(to bottom, #ffffff 0%, #f0f0f0 100%);
     position: relative;
     text-align: center;
     overflow: hidden;
