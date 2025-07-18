@@ -3,6 +3,8 @@
     padding: 80px 20px;
     max-width: 1200px;
     margin: 0 auto;
+    /* Match Teachers section background */
+    background: linear-gradient(to bottom, #ffffff 0%, #f0f0f0 100%);
   }
   
   .title {
